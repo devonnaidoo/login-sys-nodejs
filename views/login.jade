@@ -1,0 +1,22 @@
+extends layout
+
+block content
+    .row.register-container-1
+        .register-container
+            .col.l5.m6.s12.valign-wrapper.register-heading
+                    h1.white-text Login In
+            .col.l7.m6.s12
+                .container-form
+                    .row
+                        form.col.s12(method='post', action='/users/login')
+                            .row
+                                .input-field.col.s12
+                                    input#username.validate(name='username', type='text', placeholder='Enter user')
+                                    label(for='username') Username
+                            .row
+                                .input-field.col.s12
+                                    input#password.validate(name='password', type='password', placeholder='Enter password')
+                                    label(for='password') Password
+                            .row
+                                .input-field.col.s12
+                                    input.waves-effect.waves-light.btn(name='submit', type='submit', value='Register')
