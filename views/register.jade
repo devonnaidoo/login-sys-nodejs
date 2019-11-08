@@ -1,11 +1,11 @@
 extends layout
 
 block content
-    .row.register-container
-        .col.s4.valign-wrapper.register-heading
-            h1 Register Here
-        .col.s8
-            .container
+    .register-container
+        .row
+            .col.s4.valign-wrapper.register-heading
+                h1 Register Here
+            .col.s8
                 .container-form
                     .row
                         form.col.s12(method='post', action='/users/register', enctype='multipart/form-data')
