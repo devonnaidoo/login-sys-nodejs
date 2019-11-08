@@ -43,3 +43,21 @@ form input[type="submit"],
 form i {
   color: #ffffff;
 }
+
+/* Login page */
+.login-container-1 {
+  background-image: url("https://i.pinimg.com/originals/0b/a3/d6/0ba3d60362c7e6d256cfc1f37156bad9.jpg");
+  margin-bottom: 0 !important;
+}
+.login-heading {
+  height: 500px;
+}
+
+.login-heading h1 {
+  margin: auto auto !important;
+}
+
+.login-container .l7 {
+  background-color: #ffffff;
+  padding: 150px 75px !important;
+}
