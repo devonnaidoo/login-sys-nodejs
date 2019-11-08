@@ -10,20 +10,21 @@ html
   |     
   body
     nav
-      .nav-wrapper
-        a.brand-logo(href='#!') LoginSys
-        a.sidenav-trigger(data-target='mobile-demo', href='#')
-          i.material-icons menu
-        ul.left.hide-on-med-and-down
-          li
-            a(href='/') Home
-          li
-            a(href='/members') Members
-        ul.right.hide-on-med-and-down
-          li
-            a.waves-effect.waves-light.btn(href='/login') Login
-          li
-            a.waves-effect.waves-light.btn(href='/register') Sign Up
+      .nav-wrapper.blue.accent-2
+        .container
+          a.brand-logo(href='/') Login System
+          a.sidenav-trigger(data-target='mobile-demo', href='#')
+            i.material-icons menu
+          ul.right.hide-on-med-and-down
+            li
+              a(href='/') Home
+            li
+              a(href='/members') Members
+            li
+              a.waves-effect.waves-light.btn.grey.lighten-5.blue-text(href='/login') Login
+            li
+              a.waves-effect.waves-light.btn.grey.darken-3(href='/register') Sign Up
+          
     ul#mobile-demo.sidenav
       li
         a(href='/') Home
@@ -36,4 +37,6 @@ html
     
     block content
     // JavaScript at end of body for optimized loading
+    script(src='https://code.jquery.com/jquery-3.4.1.js', integrity='sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=', crossorigin='anonymous')
     script(src='./javascripts/materialize.min.js', type='text/javascript')
+    script(src='./javascripts/main.js', type='text/javascript')
