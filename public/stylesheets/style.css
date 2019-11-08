@@ -8,6 +8,13 @@ h1 {
 .nav-wrapper {
   background-color: #1c42b1;
 }
+.login-btn {
+  background-color: #1e46c0;
+}
+.sn-btn {
+  color: #1c42b1;
+  background-color: #ffffff;
+}
 /* Registration page */
 .register-container-1 {
   background-image: url("https://i.pinimg.com/originals/0b/a3/d6/0ba3d60362c7e6d256cfc1f37156bad9.jpg");
