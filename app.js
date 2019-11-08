@@ -5,6 +5,7 @@ var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
 var session = require("express-session");
+var expressValidator = require("express-validator");
 var passport = require("passport");
 var localStrategy = require("passport-local").Strategy;
 var multer = require("multer");
