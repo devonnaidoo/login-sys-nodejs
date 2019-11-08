@@ -5,7 +5,13 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 var session = require("express-session");
 var bodyParser = require("body-parser");
-var 
+var passport = require("passport");
+var localStrategy = require("passport-local").Strategy;
+var multer = require("multer");
+var flash = require("connect-flash");
+var mongo = require("mongodb");
+var mongoose = require("mongoose");
+var db = mongoose.connection;
 
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
