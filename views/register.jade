@@ -1,1 +1,40 @@
 extends layout
+
+block content
+    .row.register-container
+        .col.s4.valign-wrapper.register-heading
+            h1 Register Here
+        .col.s8
+            .container
+                .container-form
+                    .row
+                        form.col.s12(method='post', action='/users/register', enctype='multipart/form-data')
+                            .row
+                                .input-field.col.s6
+                                    input#first_name.validate(name='name', type='text', placeholder='Enter name')
+                                    label(for='first_name') Name
+                                .input-field.col.s6
+                                    input#username.validate(name='username', type='text', placeholder='Enter user')
+                                    label(for='username') Username
+                            .row
+                                .input-field.col.s12
+                                    input#email.validate(name='email', type='email', placeholder='Enter email')
+                                    label(for='email') Email
+                            .row
+                                .input-field.col.s12
+                                    input#password.validate(name='password', type='password', placeholder='Enter password')
+                                    label(for='password') Password
+                            .row
+                                .input-field.col.s12
+                                    input#password2.validate(name='password2', type='password', placeholder='Confirm password')
+                                    label(for='password2') Password
+                            .row
+                                .file-field.input-field
+                                    .btn
+                                        span File
+                                        input(name='profileimage', type='file')
+                                    .file-path-wrapper
+                                        input.file-path.validate(name='profileimage', type='text', placeholder='Upload profile picture here')
+                            .row
+                                .input-field.col.s12
+                                    input.waves-effect.waves-light.btn(name='submit', type='submit', value='Register')
