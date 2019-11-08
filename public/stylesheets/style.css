@@ -30,12 +30,16 @@ h1 {
 
 .register-container .l7 {
   background-color: #ffffff;
-  padding: 75px !important;
+  padding: 50px 75px !important;
+}
+form {
+  text-align: center !important;
 }
 form i,
 form .btn {
   background-color: #1c42b1 !important;
 }
-form input[type="submit"] {
+form input[type="submit"],
+form i {
   color: #ffffff;
 }
