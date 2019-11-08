@@ -2,12 +2,14 @@ var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
 var cookieParser = require("cookie-parser");
+var bodyParser = require("body-parser");
 var logger = require("morgan");
 var session = require("express-session");
-var bodyParser = require("body-parser");
 var passport = require("passport");
 var localStrategy = require("passport-local").Strategy;
 var multer = require("multer");
+// Handle File Uploads
+var upload = multer({ dest: "./uploads" });
 var flash = require("connect-flash");
 var mongo = require("mongodb");
 var mongoose = require("mongoose");
@@ -21,9 +23,6 @@ var app = express();
 // view engine setup
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "jade");
-
-// Handle File Uploads
-app.use(multer({ dest: "./uploads" }));
 
 app.use(logger("dev"));
 app.use(express.json());
