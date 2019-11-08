@@ -25,7 +25,8 @@ h1 {
   background-color: #ffffff;
   padding: 50px !important;
 }
-form a:last-child {
+form i,
+form .btn {
   background-color: #1c42b1 !important;
 }
 form input[type="submit"] {
