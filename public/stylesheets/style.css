@@ -4,10 +4,9 @@ h1 {
   font-weight: bold;
 }
 /* Registration page */
-.register-container {
+.register-container-1 {
   background-image: url("https://i.pinimg.com/originals/0b/a3/d6/0ba3d60362c7e6d256cfc1f37156bad9.jpg");
-  height: 100vh;
-  padding: 50px !important;
+  /* height: 100vh; */
 }
 .register-heading {
   height: 400px;
@@ -15,4 +14,9 @@ h1 {
 
 .register-heading h1 {
   margin: 0 auto !important;
+}
+
+.register-container .s7 {
+  background-color: #ffffff;
+  padding: 50px !important;
 }
