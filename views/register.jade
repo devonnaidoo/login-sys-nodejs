@@ -3,13 +3,13 @@ extends layout
 block content
     .row.register-container-1
         .register-container
-            .col.l5.m6.s12.valign-wrapper.register-heading
+            .col.l5.m5.s12.valign-wrapper.register-heading
                 h1.white-text Sign Up
                 ul.collection.errors
                     if errors
                         each error, i in errors
                             li.red.accent-3.white-text.collection-item #{error.msg}
-            .col.l7.m6.s12
+            .col.l7.m7.s12
                 .container-form
                     .row
                         form.col.s12(method='post', action='/users/register', enctype='multipart/form-data')
