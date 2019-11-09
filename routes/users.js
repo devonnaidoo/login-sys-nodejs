@@ -23,12 +23,14 @@ router.post("/register", upload.single("profileimage"), function(
   res,
   next
 ) {
+  // Storing all form input data in variables
   var name = req.body.name;
   var email = req.body.email;
   var username = req.body.username;
   var password = req.body.password;
   var password2 = req.body.password2;
 
+  // Checking if a file has been uploaded or not. If no file, a default file will be provided
   if (req.file) {
     console.log("File uploaded!...");
     var profileimage = req.file.filename;
@@ -48,6 +50,7 @@ router.post("/register", upload.single("profileimage"), function(
   // Check Errors
   var errors = req.validationErrors();
 
+  // Checking if user entered all fields correctly, if not, errors will be displayed in the DOM of register page
   if (errors) {
     res.render("register", { errors: errors });
   } else {
