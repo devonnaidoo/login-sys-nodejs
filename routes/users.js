@@ -29,8 +29,12 @@ router.post("/register", upload.single("profileimage"), function(
   var password = req.body.password;
   var password2 = req.body.password2;
 
-  // if (req.file) {
-  //   console.log(req.file);
-  // }
+  if (req.file) {
+    console.log("File uploaded!...");
+    var profileimage = req.file.filename;
+  } else {
+    console.log("No file uploaded");
+    var profileimage = "noimage.jpg";
+  }
 });
 module.exports = router;
