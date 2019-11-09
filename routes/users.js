@@ -23,6 +23,14 @@ router.post("/register", upload.single("profileimage"), function(
   res,
   next
 ) {
-  console.log(req.body.name);
+  var name = req.body.name;
+  var email = req.body.email;
+  var username = req.body.username;
+  var password = req.body.password;
+  var password2 = req.body.password2;
+
+  // if (req.file) {
+  //   console.log(req.file);
+  // }
 });
 module.exports = router;
