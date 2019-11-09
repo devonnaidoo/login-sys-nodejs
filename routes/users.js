@@ -36,5 +36,17 @@ router.post("/register", upload.single("profileimage"), function(
     console.log("No file uploaded");
     var profileimage = "noimage.jpg";
   }
+
+  // Form Validator
+  req.checkBody("name", "Name field is required").notEmpty();
+
+  // Check Errors
+  var errors = req.validationErrors();
+
+  if (errors) {
+    console.log("No errors");
+  } else {
+    console.log("No errors");
+  }
 });
 module.exports = router;

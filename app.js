@@ -4,8 +4,8 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
-var session = require("express-session");
 var expressValidator = require("express-validator");
+var session = require("express-session");
 var passport = require("passport");
 var localStrategy = require("passport-local").Strategy;
 var multer = require("multer");
@@ -28,6 +28,7 @@ app.set("view engine", "jade");
 app.use(logger("dev"));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
+app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 
