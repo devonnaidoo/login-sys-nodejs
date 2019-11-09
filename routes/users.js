@@ -49,7 +49,7 @@ router.post("/register", upload.single("profileimage"), function(
   var errors = req.validationErrors();
 
   if (errors) {
-    console.log("No errors");
+    res.render("register", { errors: errors });
   } else {
     console.log("No errors");
   }

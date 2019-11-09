@@ -4,7 +4,11 @@ block content
     .row.register-container-1
         .register-container
             .col.l5.m6.s12.valign-wrapper.register-heading
-                    h1.white-text Sign Up
+                h1.white-text Sign Up
+                ul.collection.errors
+                    if errors
+                        each error, i in errors
+                            li.red.accent-3.white-text.collection-item #{error.msg}
             .col.l7.m6.s12
                 .container-form
                     .row
@@ -22,7 +26,7 @@ block content
                                     label(for='email') Email
                             .row
                                 .input-field.col.s12
-                                    input#password.validate(name='password', type='password', placeholder='Enter password')
+                                    input#password.validate(name='password', type='password', placeholder='Enter password', autocomplete="new-password")
                                     label(for='password') Password
                             .row
                                 .input-field.col.s12
@@ -38,3 +42,4 @@ block content
                             .row
                                 .input-field.col.s12
                                     input.waves-effect.waves-light.btn(name='submit', type='submit', value='Register')
+    
