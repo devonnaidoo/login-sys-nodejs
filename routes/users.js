@@ -39,6 +39,11 @@ router.post("/register", upload.single("profileimage"), function(
 
   // Form Validator
   req.checkBody("name", "Name field is required").notEmpty();
+  req.checkBody("email", "Email field is required").notEmpty();
+  req.checkBody("email", "Email is not required").isEmail();
+  req.checkBody("username", "Username field is required").notEmpty();
+  req.checkBody("password", "Password field is required").notEmpty();
+  req.checkBody("password2", "Password do not match").equals(req.body.password);
 
   // Check Errors
   var errors = req.validationErrors();
