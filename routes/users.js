@@ -59,14 +59,17 @@ router.post("/register", upload.single("profileimage"), function(
   } else {
     var newUser = new User({
       name: name,
-      email = email,
-      username:username,
+      email: email,
+      username: username,
       password: password,
       profileimage: profileimage
     });
-    User.createUser(newUser, () => {
-      
+    User.createUser(newUser, (err, user) => {
+      if (err) throw err;
+      console.log(user);
     });
+    res.location("/");
+    res.redirect("/");
   }
 });
 module.exports = router;
