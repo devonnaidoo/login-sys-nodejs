@@ -1,6 +1,8 @@
 var mongoose = require("mongoose");
 
-mongoose.connect("mongodb://localhost/login-sys-nodejs");
+mongoose.connect("mongodb://localhost/login-sys-nodejs", {
+  useNewUrlParser: true
+});
 
 var db = mongoose.connection;
 
