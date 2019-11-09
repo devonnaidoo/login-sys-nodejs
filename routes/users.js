@@ -68,6 +68,10 @@ router.post("/register", upload.single("profileimage"), function(
       if (err) throw err;
       console.log(user);
     });
+
+    // Show a success message for registeration
+    req.flash("success", "You have successfully registered!");
+
     res.location("/");
     res.redirect("/");
   }
