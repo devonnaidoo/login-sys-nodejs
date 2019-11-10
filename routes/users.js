@@ -127,7 +127,7 @@ router.post("/register", upload.single("profileimage"), function(
 });
 router.get("/logout", function(req, res) {
   req.logout();
-  res.flash("success", "You are now logged out");
+  req.flash("success", "You are now logged out");
   res.redirect("/users/login");
 });
 
