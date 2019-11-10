@@ -4,10 +4,10 @@ var path = require("path");
 var cookieParser = require("cookie-parser");
 var bodyParser = require("body-parser");
 var logger = require("morgan");
-var expressValidator = require("express-validator");
 var session = require("express-session");
 var passport = require("passport");
 var localStrategy = require("passport-local").Strategy;
+var expressValidator = require("express-validator");
 var multer = require("multer");
 // Handle File Uploads
 var upload = multer({ dest: "./uploads" });
