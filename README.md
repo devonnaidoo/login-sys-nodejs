@@ -16,6 +16,11 @@ A login and sign up application using Node.js and ExpressJS.
 - HTML
 - CSS
 
+### Prerequisites
+
+- [Node.js](https://nodejs.org/en/download/) installed on your system
+- [MongoDB](https://www.mongodb.com/download-center/enterprise) installed on your system
+
 ## How to Use
 
 ### Installation
