@@ -55,3 +55,7 @@ Open up the command line
 2. Once there, enter the command `mongo`
 3. Next enter `use login-sys-nodejs` - You are now using the login system database
    ⋅⋅⋅ Read more about MongoDB commands [here](https://docs.mongodb.com/manual/mongo/)
+
+## License
+
+This project is licensed under the MIT License
