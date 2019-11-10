@@ -5,10 +5,11 @@ block content
         .register-container
             .col.l5.m5.s12.valign-wrapper.register-heading
                 h1.white-text Sign Up
-                ul.collection.errors
+                    //- Shows errors from validation and is called from: res.render("register", { errors: errors })
                     if errors
-                        each error, i in errors
-                            li.red.accent-3.white-text.collection-item #{error.msg}
+                        ul.collection.errors
+                            each error, i in errors
+                                li.red.accent-3.white-text.collection-item #{error.msg}
             .col.l7.m7.s12
                 .container-form
                     .row
