@@ -32,6 +32,19 @@ module.exports.getUserById = function(id, callback) {
   User.findById(id, callback);
 };
 
+module.exports.getUserByUsername = function(id, callback) {
+  var query = { username: username };
+  User.findOne(query, callback);
+};
+
+module.exports.comparePassword = function(candidatePassword, hash, callback) {
+  // Load hash from your password DB.
+  bcrypt.compare(candidatePassword, hash, function(err, isMatch) {
+    // res === true
+    callback(null, isMatch);
+  });
+};
+
 module.exports.createUser = function(newUser, callback) {
   bcrypt.genSalt(10, function(err, salt) {
     bcrypt.hash(newUser.password, salt, function(err, hash) {
