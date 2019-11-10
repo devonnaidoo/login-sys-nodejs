@@ -125,4 +125,10 @@ router.post("/register", upload.single("profileimage"), function(
     res.redirect("/");
   }
 });
+router.get("/logout", function(req, res) {
+  req.logout();
+  res.flash("success", "Yout are now logged out");
+  res.redirect("/users/login");
+});
+
 module.exports = router;
