@@ -25,15 +25,14 @@ router.get("/login", function(req, res, next) {
 // Passport config
 router.post(
   "/login",
-  passport.authenticate("local"),
-  {
+  passport.authenticate("local", {
     failureRedirect: "/users/login",
     failureFlash: "Invalid username or password"
-  },
+  }),
   function(req, res) {
     // If this function gets called, authentication was successful.
     // `req.user` contains the authenticated user.
-    res.flash("success", "You are now logged in");
+    req.flash("success", "You are now logged in");
     res.redirect("/");
   }
 );
@@ -50,7 +49,7 @@ passport.deserializeUser(function(id, done) {
 
 // Below is a password Strategy
 passport.use(
-  new LocalStrategy(function(username, password, done) {
+  new localStrategy(function(username, password, done) {
     // User is referenced from mongoose.model in user.js file
     User.getUserByUsername(username, function(err, user) {
       if (err) throw err;
