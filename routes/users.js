@@ -57,7 +57,7 @@ passport.use(
         return done(null, false, { message: "Unknown User" });
       }
 
-      User.comparePassword(password, user.password, () => {
+      User.comparePassword(password, user.password, (err, isMatch) => {
         if (err) return done(err);
         if (isMatch) {
           return done(null, user);
