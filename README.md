@@ -28,3 +28,13 @@ A login and sign up application using Node.js and ExpressJS.
 Run:
 
 `npm install`
+
+### Usage
+
+To start the application run the following command in the root directory:
+
+`npm start`
+
+Once done, in the browser copy and paste the following URL:
+
+`http://localhost:3000/`
