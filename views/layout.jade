@@ -17,14 +17,15 @@ html
           a.sidenav-trigger(data-target='mobile-demo', href='#')
             i.material-icons menu
           ul.right.hide-on-med-and-down
-            li(class=(title == "Home" ? "active" : ''))
-              a(href='/') Home
-            li
-              a(href='/users/logout') Logout
-            li
-              a.waves-effect.waves-light.btn.login-btn(href='/users/login') Login
-            li
-              a.waves-effect.waves-light.btn.sn-btn(href='/users/register') Sign Up
+              li(class=(title == "Home" ? "active" : ''))
+                a(href='/') Home
+              li
+                a(href='/users/logout') Logout
+              li
+                a.waves-effect.waves-light.btn.login-btn(href='/users/login') Login
+              li
+                a.waves-effect.waves-light.btn.sn-btn(href='/users/register') Sign Up
+            
           
     ul#mobile-demo.sidenav
       li(class=(title == "Home" ? "active" : ''))

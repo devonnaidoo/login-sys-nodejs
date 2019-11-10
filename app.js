@@ -73,4 +73,10 @@ app.use(function(err, req, res, next) {
   res.render("error");
 });
 
+// Global variable for checking if a user is logged in
+app.get("*", function(req, res, next) {
+  res.locals.user = req.user || null;
+  next();
+});
+
 module.exports = app;
