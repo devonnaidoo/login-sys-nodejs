@@ -8,6 +8,14 @@ A login and sign up application using Node.js and ExpressJS.
 
 ![](public/images/login-system-nodejs-signup-page.jpg)
 
+### Features
+
+- Sign up users
+- Login users
+- Logout users
+- Form validation
+- Home page restrictions unless logged in
+
 ### Technologies
 
 - Node.js
