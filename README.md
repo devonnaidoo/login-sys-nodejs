@@ -15,3 +15,11 @@ A login and sign up application using Node.js and ExpressJS.
 - MongoDB
 - HTML
 - CSS
+
+## How to Use
+
+### Installation
+
+Run:
+
+`npm install`
